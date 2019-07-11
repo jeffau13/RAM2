@@ -1,0 +1,35 @@
+#wrapper {
+  margin-top: 70px;
+}
+.projectTitle {
+  font-family: 'Roboto Mono';
+  font-size: 2em;
+  width: 1000px;
+  margin: 0px auto;
+  padding-bottom: 25px;
+  color: white;
+  .projectName {
+    width: 100%;
+    font-size: 2em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .projectDesc {
+    font-weight: 100;
+    font-size: 0.7em;
+    margin-top: -20px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .projectTitle {
+    width: 300px;
+    .projectName {
+      font-size: 36px;
+    }
+    .projectDesc {
+      font-size: 12px;
+      //   line-height:0.1em;
+    }
+  }
+}

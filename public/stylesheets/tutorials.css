@@ -1,0 +1,38 @@
+#wrapper {
+  margin-top: 70px;
+}
+
+.projectTitle {
+  font-family: 'Roboto Mono';
+  font-size: 2em;
+  width: 1000px;
+  margin: 0px auto;
+  padding-bottom: 25px;
+  color: white;
+}
+
+.projectTitle .projectName {
+  width: 100%;
+  font-size: 2em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.projectTitle .projectDesc {
+  font-weight: 100;
+  font-size: 0.7em;
+  margin-top: -20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .projectTitle {
+    width: 300px;
+  }
+  .projectTitle .projectName {
+    font-size: 36px;
+  }
+  .projectTitle .projectDesc {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=tutorials.css.map */

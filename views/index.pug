@@ -1,5 +1,135 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title RAM3DDA | HOME
+    link(rel='shortcut icon', href='assets/avatar/favicon-32x32.png', type='image/x-icon')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.6.3/css/all.css', integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/', crossorigin='anonymous')
+    link(type='text/css', rel='stylesheet', href='css/lightgallery.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono:100,300,400', rel='stylesheet')
+    link(rel='stylesheet', href='https://use.typekit.net/yca1xhd.css')
+    link(href='stylesheets/main.css', rel='stylesheet')
+    link(href='stylesheets/loading.css', rel='stylesheet')
+    link(href='stylesheets/overlay.css', rel='stylesheet')
+    link(href='stylesheets/textScramble.css', rel='stylesheet')
+  body
+    // --------------------------NAV & HEADER SECTION -------------------------
+    #everything
+      nav#overlay
+        // <img src="assets/close.svg" class="close-btn" id="close-menu" />
+        i#close-menu.fas.fa-times.fa-3x.close-btn.icon
+        ul
+          li
+            a#NavHome.nav-link(href='index.html') HOME
+            span.nav-desc Let's go home
+          li
+            a#NavSiege.nav-link(href='projects.html') PROJECTS
+            span.nav-desc 3D Renders and other projects
+          li
+            a#NavVideo.nav-link(href='tutorials.html') TUTORIALS
+            span.nav-desc A series of tutorials I have produced
+          li
+            a#NavPrints.nav-link(href='about.html') About
+            span.nav-desc About Ross Morris
+          li
+            a#NavPrints.nav-link(href='contact.html') Contact
+            span.nav-desc Where you can contact me!
+          li#contacts
+            .iconbar
+              a(href='https://instagram.com/ram3dda')
+                i.fab.fa-instagram.fa-lg.icons
+              a(href='https://twitter.com/ram3dda')
+                i.fab.fa-twitter.fa-lg.icons
+              a(href='https://facebook.com/ram3dda')
+                i.fab.fa-facebook.fa-lg.icons
+              a(href='https://www.youtube.com/channel/UCXtKr1Zqk3baNqeM-wXa_uA  ')
+                i.fab.fa-youtube.fa-lg.icons
+              a(href='https://www.dropbox.com/sh/mieducoo5jen58p/AAClJuRUwT5-QyfUI6I_7S0qa?dl=0')
+                i.fab.fa-dropbox.fa-lg.icons
+            //
+              <br>
+              <div class='emailBox'>
+              <span>For commissions or other business inqueries, please email:</span>
+              <a href="mailto:rossmorris1400@gmail.com" class="nav-link email" id="email">
+              rossmorris1400@gmail.com</a>
+              </div>
+      header#topbar
+        .leftTop
+          a#open-menu
+            i#menu-icon.fa.fa-bars.fa-3x.menu-btn.icons(aria-hidden='true')
+          a(href='index.html')
+            img#smallLogo.logoIMG(src='assets/logo.png')
+        .centerTop
+          // <div class="text"></div>
+        .rightTop
+          .topNav
+            a.current(href='index.html') HOME
+            |  -
+            a(href='projects.html') PROJECTS
+            |  -
+            a(href='tutorials.html') TUTORIALS
+            |  -
+            a(href='about.html') ABOUT
+            |  -
+            a(href='contact.html') CONTACT
+          .social
+            a(href='https://instagram.com/ram3dda')
+              i.fab.fa-instagram.fa-lg.icons
+            a(href='https://twitter.com/ram3dda')
+              i.fab.fa-twitter.fa-lg.icons
+            a(href='https://facebook.com/ram3dda')
+              i.fab.fa-facebook.fa-lg.icons
+            a(href='https://www.youtube.com/channel/UCXtKr1Zqk3baNqeM-wXa_uA  ')
+              i.fab.fa-youtube.fa-lg.icons
+            a(href='https://www.dropbox.com/sh/mieducoo5jen58p/AAClJuRUwT5-QyfUI6I_7S0qa?dl=0')
+              i.fab.fa-dropbox.fa-lg.icons
+      #loader-wrapper
+        #loader
+          .text
+        .loader-section.section-left
+        .loader-section.section-right
+      // --------------------------END OF NAV & HEADER SECTION -------------------------
+      #centerWrapper
+        #centerInfo
+          img#mainLogo(src='assets/horizontal.png')
+          h1#mainTitle ROSS A. MORRIS
+          #subtitle 3D DESIGN & ANIMATION
+          #playContainer
+            a.playBut(href='https://vimeo.com/278783870')
+              svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='213.7px', height='213.7px', viewBox='0 0 213.7 213.7', enable-background='new 0 0 213.7 213.7', xml:space='preserve')
+                polygon#XMLID_18_.triangle(fill='none', stroke-width='7', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', points='\
+                73.5,62.5 148.5,105.8 73.5,149.1 ')
+                circle#XMLID_17_.circle(fill='none', stroke-width='7', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', cx='106.8', cy='106.8', r='103.3')
+            // add additional content here
+            a(href='assets/img/siege/landscape/jackal.jpg')
+        .mobileIcons
+          a(href='https://instagram.com/ram3dda')
+            i.fab.fa-instagram.fa-lg.icons
+          a(href='https://twitter.com/ram3dda')
+            i.fab.fa-twitter.fa-lg.icons
+          a(href='https://facebook.com/ram3dda')
+            i.fab.fa-facebook.fa-lg.icons
+          a(href='https://www.youtube.com/channel/UCXtKr1Zqk3baNqeM-wXa_uA  ')
+            i.fab.fa-youtube.fa-lg.icons
+          a(href='https://www.dropbox.com/sh/mieducoo5jen58p/AAClJuRUwT5-QyfUI6I_7S0qa?dl=0')
+            i.fab.fa-dropbox.fa-lg.icons
+      // ^End Center Wrapper
+      #wrapper
+        .vimeo-wrapper
+          iframe(src='https://player.vimeo.com/video/341930562?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+      // ^ End Wrapper
+      // end
+      script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
+      script(src='javascripts/lazysizes.min.js')
+      script(src='javascripts/lightgallery-all-min.js')
+      // A jQuery plugin that adds cross-browser mouse wheel support. (Optional)
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js')
+      //
+        light
+        plugins
+      // <script src="js/lg-thumbnail.min.js"></script>
+      // <script src="js/lg-fullscreen.min.js"></script>
+      script(src='./javascripts/textScramble.js')
+      script(src='javascripts/app.js')
