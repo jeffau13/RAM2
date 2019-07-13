@@ -1,6 +1,13 @@
 extends ./layout.pug
 
+
+
 block content
+  #loader-wrapper
+    #loader
+      .text
+    .loader-section.section-left
+    .loader-section.section-right
   #centerWrapper
     #centerInfo
       img#mainLogo(src='assets/horizontal.png')
@@ -25,21 +32,8 @@ block content
         i.fab.fa-youtube.fa-lg.icons
       a(href='https://www.dropbox.com/sh/mieducoo5jen58p/AAClJuRUwT5-QyfUI6I_7S0qa?dl=0')
         i.fab.fa-dropbox.fa-lg.icons
-  // ^End Center Wrapper
+
   #wrapper
     .vimeo-wrapper
       iframe(src='https://player.vimeo.com/video/341930562?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
-  // ^ End Wrapper
-  // end
-  script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
-  script(src='javascripts/lazysizes.min.js')
-  script(src='javascripts/lightgallery-all-min.js')
-  // A jQuery plugin that adds cross-browser mouse wheel support. (Optional)
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js')
-  //
-    light
-    plugins
-  // <script src="js/lg-thumbnail.min.js"></script>
-  // <script src="js/lg-fullscreen.min.js"></script>
-  script(src='./javascripts/textScramble.js')
-  script(src='javascripts/app.js')
+  script(src='javascripts/home.js')
