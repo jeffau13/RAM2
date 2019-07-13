@@ -1,0 +1,74 @@
+mixin navbar()
+      nav#overlay
+        // <img src="assets/close.svg" class="close-btn" id="close-menu" />
+        i#close-menu.fas.fa-times.fa-3x.close-btn.icon
+        ul
+          li
+            a#NavHome.nav-link(href='/') HOME
+            span.nav-desc Let's go home
+          li
+            a#NavSiege.nav-link(href='/projects') PROJECTS
+            span.nav-desc 3D Renders and other projects
+          li
+            a#NavVideo.nav-link(href='/tutorials') TUTORIALS
+            span.nav-desc A series of tutorials I have produced
+          li
+            a#NavPrints.nav-link(href='/about') About
+            span.nav-desc About Ross Morris
+          li
+            a#NavPrints.nav-link(href='/contact') Contact
+            span.nav-desc Where you can contact me!
+          li#contacts
+            .iconbar
+              a(href='https://instagram.com/ram3dda')
+                i.fab.fa-instagram.fa-lg.icons
+              a(href='https://twitter.com/ram3dda')
+                i.fab.fa-twitter.fa-lg.icons
+              a(href='https://facebook.com/ram3dda')
+                i.fab.fa-facebook.fa-lg.icons
+              a(href='https://www.youtube.com/channel/UCXtKr1Zqk3baNqeM-wXa_uA  ')
+                i.fab.fa-youtube.fa-lg.icons
+              a(href='https://www.dropbox.com/sh/mieducoo5jen58p/AAClJuRUwT5-QyfUI6I_7S0qa?dl=0')
+                i.fab.fa-dropbox.fa-lg.icons
+            //
+              <br>
+              <div class='emailBox'>
+              <span>For commissions or other business inqueries, please email:</span>
+              <a href="mailto:rossmorris1400@gmail.com" class="nav-link email" id="email">
+              rossmorris1400@gmail.com</a>
+              </div>
+      header#topbar
+        .leftTop
+          a#open-menu
+            i#menu-icon.fa.fa-bars.fa-3x.menu-btn.icons(aria-hidden='true')
+          a(href='/')
+            img#smallLogo.logoIMG(src='assets/logo.png')
+        .centerTop
+          // <div class="text"></div>
+        .rightTop
+          .topNav
+            a.current(href='/') HOME
+            |  -
+            a(href='/projects') PROJECTS
+            |  -
+            a(href='/tutorials') TUTORIALS
+            |  -
+            a(href='/about') ABOUT
+            |  -
+            a(href='/contact') CONTACT
+          .social
+            a(href='https://instagram.com/ram3dda')
+              i.fab.fa-instagram.fa-lg.icons
+            a(href='https://twitter.com/ram3dda')
+              i.fab.fa-twitter.fa-lg.icons
+            a(href='https://facebook.com/ram3dda')
+              i.fab.fa-facebook.fa-lg.icons
+            a(href='https://www.youtube.com/channel/UCXtKr1Zqk3baNqeM-wXa_uA  ')
+              i.fab.fa-youtube.fa-lg.icons
+            a(href='https://www.dropbox.com/sh/mieducoo5jen58p/AAClJuRUwT5-QyfUI6I_7S0qa?dl=0')
+              i.fab.fa-dropbox.fa-lg.icons
+      #loader-wrapper
+        #loader
+          .text
+        .loader-section.section-left
+        .loader-section.section-right
