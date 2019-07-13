@@ -6,4 +6,21 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/projects', (req, res, next) => {
+  res.render('projects', { title: 'projects!' });
+});
+router.get('/tutorials', (req, res, next) => {
+  res.render('tutorials', { title: 'tutorials!' });
+});
+router.get('/about', (req, res, next) => {
+  res.render('about', { title: 'about!' });
+});
+router.get('/contact', (req, res, next) => {
+  res.render('contact', { title: 'contact!' });
+});
+
+router.get('/test', (req, res, next) => {
+  res.render('test', { title: 'test!' });
+});
+
 module.exports = router;
