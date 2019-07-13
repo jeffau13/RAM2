@@ -2,48 +2,65 @@ extends ./layout.pug
 include ./mixins.pug
 
 block head
-    link(href='stylesheets/about.css', rel='stylesheet')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
+    link(href='stylesheets/contact.css', rel='stylesheet')
 
 block content
     #wrapper
-      .left
-        .centered
-          img.horizontalLogo(src='assets/horizontal.png', 'alt'='Logo')
-          img(src=' assets/ross.jpg')
-      .right
-        .centered
-          h1 About:
-          p
-            | I am Ross Morris. A Los Angeles based 3D artist. I graduated from Full Sail University in December 2017 with
-            | a Bachelor's in Digital Art & Design with The Course Director's Award for Advanced Motion Graphics. I'm
-            | trained as a multimedia specialist using the Adobe suite but I use this to supplement my primary emphasis on
-            | 3D Design and Animation.
-            | Since my graduation I've been working as a freelancer and honing my 3D skill set with numerous personal
-            | projects- much of what you see here.
-          p
-            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam nisi autem excepturi in libero
-          hr
-          .lists
-            .software
-              h3 Software i use to produce my work:
-              ul
-                li Cinema4D
-                li Adobe Aftereffects
-                li Adobe Premiere 
-                li Adobe Fuse
-                li Adobe Illustrator
-                li Houdini
-                li JSplacement
-            .hardware
-              h3 My hardware:
-              ul
-                li  I7 7700k
-                li 2x Asus Strix GTX1080ti
-                li 32GB GSkill DDR4 3000MHz
-                li Samsung NVMe 960 Pro 500GB
-                li Samsung SSD 850 Pro 1TB
-          hr
-          p
-            | This website is built by 
-            a(href='http://www.jeffau.com') Jeff Au
-    
+        .projectTitle
+            h1.projectName Get in touch 
+            br
+            p.projectDesc
+                | Feel free to reach out to me on 
+                a(href='https://twitter.com/ram3dda') twitter
+                | , via 
+                a#email(href='mailto:rossmorris1400@gmail.com') email
+                | , or simply fill out the contact form below:
+        form#contact-form(method='post', action='https://formcarry.com/s/xk6hDzVxJzS', role='form')
+            .messages
+            |           
+            .controls
+                .row
+                .col-md-6
+                    .form-group
+                    label(for='form_name') Name
+                    input#form_name.form-control(type='text', name='name', placeholder='Please enter yourname *', required='required', data-error='Firstname is required.')
+                    .help-block.with-errors
+                .row
+                .col-md-6
+                    .form-group
+                    label(for='form_email') Email *
+                
+                    input#form_email.form-control(type='email', name='email', placeholder='Please enter your email *', required='required', data-error='Valid email is required.')
+
+                    .help-block.with-errors
+
+                .row
+                .col-md-6
+                    .form-group
+                    label(for='form_type') Please specify your need *
+                
+                    select#form_type.form-control(name='type', required='required', data-error='Please specify your need.')
+                        option(value='No Type') Please Select One:
+
+                        option(value='Commissions/Business Inquiry') Commissions/Business Inquiry
+
+                        option(value='Question') Question
+
+                        option(value='Saying Hi') Just saying hi!
+
+                        option(value='Other') Other
+                    .help-block.with-errors
+                .row
+                .col-md-12
+                    .form-group
+                    label(for='form_message') Message *     
+                    textarea#form_message.form-control(name='message', placeholder='Message for me *', rows='4', required='required', data-error='Please, leave us a message.')
+                    .help-block.with-errors
+                .col-md-12
+                    input.btn.btn-muted.btn-primary(type='submit', value='Send message')
+                .row
+                .col-md-12
+                    p.text-muted
+
