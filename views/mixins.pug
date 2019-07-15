@@ -47,7 +47,7 @@ mixin navbar()
            <div class="text" id="scramble"></div>
         .rightTop
           .topNav
-            a.current(href='/') HOME
+            a(href='/') HOME
             |  -
             a(href='/projects') PROJECTS
             |  -
@@ -68,15 +68,32 @@ mixin navbar()
             a(href='https://www.dropbox.com/sh/mieducoo5jen58p/AAClJuRUwT5-QyfUI6I_7S0qa?dl=0')
               i.fab.fa-dropbox.fa-lg.icons
 
-mixin projectGallery(title,description,images)
-  .projectTitle##{title}
-            h1.projectName #{title}
-            br
-            p.projectDesc #{description}
-        #gallery1.imgwall
-          for image in images
-            a.alink(href=image.fields.url, data-sub-html='.caption')
-                img.thumbnails.lazyload(data-title='THATCHER', data-src='img.fields.url')
-                .caption
-                    h4 #{image.fields.title}
-                    p #{image.fields.description}
+mixin renderProjectNav(projects)
+  .pageTitle
+    .projectMenu
+      for project,index in projects
+        .projectLink
+              a(href='#'+project.fields.slug) #{project.fields.title}
+
+mixin renderProjects(projects)
+  for project in projects
+    +renderProject(project)
+
+mixin renderProject(project)
+  .endpoint(id=project.fields.slug) |
+  .projectTitle(id=project.fields.title)
+    h1.projectName #{project.fields.title}
+    br
+    p.projectDesc #{project.fields.description}
+  .imgwall
+  +renderImages(project.fields.images)
+  
+      
+
+mixin renderImages(images)
+   for image in images
+       a.alink(href=image.fields.url, data-sub-html='.caption')
+          img.thumbnails.lazyload(data-title=image.fields.title, data-src=image.fields.url)
+          .caption
+              h4 #{image.fields.title}
+              p #{image.fields.description}
