@@ -67,3 +67,16 @@ mixin navbar()
               i.fab.fa-youtube.fa-lg.icons
             a(href='https://www.dropbox.com/sh/mieducoo5jen58p/AAClJuRUwT5-QyfUI6I_7S0qa?dl=0')
               i.fab.fa-dropbox.fa-lg.icons
+
+mixin projectGallery(title,description,images)
+  .projectTitle##{title}
+            h1.projectName #{title}
+            br
+            p.projectDesc #{description}
+        #gallery1.imgwall
+          for image in images
+            a.alink(href=image.fields.url, data-sub-html='.caption')
+                img.thumbnails.lazyload(data-title='THATCHER', data-src='img.fields.url')
+                .caption
+                    h4 #{image.fields.title}
+                    p #{image.fields.description}
