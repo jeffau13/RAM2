@@ -9,9 +9,6 @@ router.use(function(req, res, next) {
     .getProjects()
     .then(projectsCollection => {
       req.projects = projectsCollection.items;
-      console.log(
-        req.projects[0].fields.images[0].fields.photo.fields.file.url
-      );
       next();
     })
     .catch(err => {
