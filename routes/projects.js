@@ -13,11 +13,12 @@ router.use(function(req, res, next) {
     })
     .catch(err => {
       console.log('Error in routes/projects.js:', JSON.stringify(err, null, 2));
+      res.render('', { err });
     });
 });
 
 router.get('/projects', function(req, res, next) {
-  res.render('projects', { projects: req.projects });
+  res.render('projects', { projects: req.projects, title: 'Projects' });
 });
 
 module.exports = router;

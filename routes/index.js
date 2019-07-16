@@ -4,25 +4,17 @@ const projects = require('../services/projects');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('home', { title: 'Express' });
+  res.render('home', { title: 'RAM3DDA' });
 });
-
-// router.get('/projects', (req, res, next) => {
-//   res.render('projects', { localProjects });
-// });
 
 router.get('/tutorials', (req, res, next) => {
-  res.render('tutorials', { title: 'tutorials!' });
+  res.render('tutorials', { title: 'Tutorials' });
 });
 router.get('/about', (req, res, next) => {
-  res.render('about', { title: 'about!' });
+  res.render('about', { title: 'About' });
 });
 router.get('/contact', (req, res, next) => {
-  res.render('contact', { title: 'contact!' });
-});
-
-router.get('/test', (req, res, next) => {
-  res.render('test', { title: 'test!' });
+  res.render('contact', { title: 'Contact' });
 });
 
 module.exports = router;
