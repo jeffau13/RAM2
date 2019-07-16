@@ -92,8 +92,8 @@ mixin renderProject(project)
 
 mixin renderImages(images)
    for image in images
-       a.alink(href=image.fields.url, data-sub-html='.caption')
-          img.thumbnails.lazyload(data-title=image.fields.title, data-src=image.fields.url)
+       a.alink(href=image.fields.photo.fields.file.url, data-sub-html='.caption')
+          img.thumbnails.lazyload(data-title=image.fields.title, data-src=image.fields.photo.fields.file.url)
           .caption
               h4 #{image.fields.title}
               p #{image.fields.description}
