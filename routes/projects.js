@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var projects = require('../services/projects');
-var sr = require('screenres');
 
 // get /projects
 
@@ -9,7 +8,11 @@ router.use(function(req, res, next) {
   projects
     .getProjects()
     .then(projectsCollection => {
-      req.projects = projectsCollection.items;
+      let tempProjects = projectsCollection.items;
+      tempProjects.sort((a, b) => {
+        return a.fields.order - b.fields.order;
+      });
+      req.projects = tempProjects;
 
       next();
     })
@@ -18,17 +21,6 @@ router.use(function(req, res, next) {
       res.render('', { err });
     });
 });
-
-// router.use((req, res, next) => {
-//   const resolution = sr.get();
-//   const width = resolution[0];
-//   if (width < 1000) {
-//     req.width = 500;
-//   } else {
-//     req.width = 1920;
-//   }
-//   next();
-// });
 
 router.get('/', function(req, res, next) {
   res.render('projects', {
