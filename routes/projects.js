@@ -19,22 +19,22 @@ router.use(function(req, res, next) {
     });
 });
 
-router.use((req, res, next) => {
-  const resolution = sr.get();
-  const width = resolution[0];
-  if (width < 1000) {
-    req.width = 500;
-  } else {
-    req.width = 1920;
-  }
-  next();
-});
+// router.use((req, res, next) => {
+//   const resolution = sr.get();
+//   const width = resolution[0];
+//   if (width < 1000) {
+//     req.width = 500;
+//   } else {
+//     req.width = 1920;
+//   }
+//   next();
+// });
 
 router.get('/', function(req, res, next) {
   res.render('projects', {
     projects: req.projects,
     title: 'Projects',
-    width: req.width
+    width: 1500
   });
 });
 
