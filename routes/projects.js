@@ -34,7 +34,7 @@ router.get('/', function(req, res, next) {
   res.render('projects', {
     projects: req.projects,
     title: 'Projects',
-    width: req.widthS
+    width: req.width
   });
 });
 
