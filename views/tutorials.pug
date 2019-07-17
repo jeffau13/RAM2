@@ -1,0 +1,11 @@
+extends ./layout.pug
+include ./mixins.pug
+
+block head
+      link(href='./stylesheets/tutorials.css', rel='stylesheet')
+block content
+    #wrapper
+        +renderTutorials(tutorials)
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
+    script(src='javascripts/lazysizes.min.js')
+    script(src='javascripts/lightgallery-all-min.js')

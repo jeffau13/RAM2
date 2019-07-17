@@ -97,3 +97,16 @@ mixin renderImages(images,width)
           .caption
               h4 #{image.fields.title}
               p #{image.fields.description}
+
+mixin renderTutorials(tutorials)
+  .projectTitle
+    h1.projectName Tutorials
+    br
+    p.projectDesc Tutorials I have produced will be posted here. Hover to view video title.
+  .imgwall
+    for tutorial in tutorials
+      a.alink(href=tutorial.fields.url, data-sub-html='.caption')
+        img.thumbnails.lazyload(data-title=tutorial.fields.title, data-src=tutorial.fields.thumbnail.fields.file.url)
+        .caption
+          h4 #{tutorial.fields.title}
+          p #{tutorial.fields.description}

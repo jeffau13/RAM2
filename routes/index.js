@@ -7,9 +7,6 @@ router.get('/', function(req, res, next) {
   res.render('home', { title: 'RAM3DDA' });
 });
 
-router.get('/tutorials', (req, res, next) => {
-  res.render('tutorials', { title: 'Tutorials' });
-});
 router.get('/about', (req, res, next) => {
   res.render('about', { title: 'About' });
 });
