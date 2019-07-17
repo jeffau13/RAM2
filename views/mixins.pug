@@ -75,25 +75,25 @@ mixin renderProjectNav(projects)
         .projectLink
               a(href='#'+project.fields.slug) #{project.fields.title}
 
-mixin renderProjects(projects)
+mixin renderProjects(projects,width)
   for project in projects
-    +renderProject(project)
+    +renderProject(project,width)
 
-mixin renderProject(project)
+mixin renderProject(project,width)
   .endpoint(id=project.fields.slug) |
   .projectTitle(id=project.fields.title)
     h1.projectName #{project.fields.title}
     br
     p.projectDesc #{project.fields.description}
   .imgwall
-    +renderImages(project.fields.images)
+    +renderImages(project.fields.images,width)
   
       
 
-mixin renderImages(images)
+mixin renderImages(images,width)
    for image in images
        a.alink(href=image.fields.photo.fields.file.url, data-sub-html='.caption')
-          img.thumbnails.lazyload(data-title=image.fields.title, data-src=image.fields.photo.fields.file.url+"?w=1600")
+          img.thumbnails.lazyload(data-title=image.fields.title, data-src=image.fields.photo.fields.file.url+"?w="+width)
           .caption
               h4 #{image.fields.title}
               p #{image.fields.description}
