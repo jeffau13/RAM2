@@ -8,7 +8,7 @@ router.use(function(req, res, next) {
   projects
     .getProjects()
     .then(projectsCollection => {
-      let tempProjects = projectsCollection.items;
+      let tempProjects = [...projectsCollection.items];
       tempProjects.sort((a, b) => {
         return a.fields.order - b.fields.order;
       });

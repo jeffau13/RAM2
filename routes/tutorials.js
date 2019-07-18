@@ -8,8 +8,7 @@ router.use(function(req, res, next) {
   tutorials
     .getTutorials()
     .then(tutorialsCollection => {
-      const tempTutorials = tutorialsCollection.items;
-      req.tutorials = tempTutorials;
+      req.tutorials = [...tutorialsCollection.items];
       next();
     })
     .catch(err => {
