@@ -48,13 +48,13 @@ mixin navbar()
         .rightTop
           .topNav
             a(href='/') HOME
-            |  -
+            |  - 
             a(href='/projects') PROJECTS
-            |  -
+            |  - 
             a(href='/tutorials') TUTORIALS
-            |  -
+            |  - 
             a(href='/about') ABOUT
-            |  -
+            |  - 
             a(href='/contact') CONTACT
           .social
             a(href='https://instagram.com/ram3dda')
@@ -92,6 +92,13 @@ mixin renderProject(project,width)
 
 mixin renderImages(images,width)
    for image in images
+      if image.fields.link
+       a.alink(href=image.fields.link, data-sub-html='.caption')
+          img.thumbnails.lazyload(data-title=image.fields.title, data-src=image.fields.photo.fields.file.url+"?w="+width)
+          .caption
+              h4 #{image.fields.title}
+              p #{image.fields.description}
+      else
        a.alink(href=image.fields.photo.fields.file.url, data-sub-html='.caption')
           img.thumbnails.lazyload(data-title=image.fields.title, data-src=image.fields.photo.fields.file.url+"?w="+width)
           .caption
