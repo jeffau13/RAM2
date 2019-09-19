@@ -24,6 +24,20 @@ $(document).ready(function() {
     animateThumb: false,
     videoMaxWidth: '85%'
   });
+
+  $('.flex-grid').lightGallery({
+    selector: '.responsive-image',
+    thumbnail: false,
+    showThumbByDefault: false,
+    fullScreen: true,
+    hideBarsDelay: 1500,
+    mousewheel: false,
+    subHtmlSelectorRelative: true,
+    counter: false,
+    animateThumb: false,
+    videoMaxWidth: '85%'
+  });
+
   $('#playContainer').lightGallery({
     thumbnail: false,
     showThumbByDefault: false,

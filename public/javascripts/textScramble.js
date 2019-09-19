@@ -2,6 +2,7 @@
 // TextScramble
 // ——————————————————————————————————————————————————
 const thumbnails = document.querySelectorAll('.thumbnails');
+const responsiveImage = document.querySelectorAll('.responsive-image');
 class TextScramble {
   constructor(el) {
     this.el = el;
@@ -87,6 +88,18 @@ thumbnails.forEach(thumbnail =>
 );
 
 thumbnails.forEach(thumbnail =>
+  thumbnail.addEventListener('mouseout', e => {
+    fx.setText(' ');
+  })
+);
+
+responsiveImage.forEach(thumbnail =>
+  thumbnail.addEventListener('mouseover', e => {
+    fx.setText(e.target.dataset.title);
+  })
+);
+
+responsiveImage.forEach(thumbnail =>
   thumbnail.addEventListener('mouseout', e => {
     fx.setText(' ');
   })

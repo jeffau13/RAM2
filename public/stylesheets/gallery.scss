@@ -69,6 +69,18 @@
   margin-bottom: 40px;
 }
 
+.flexGrid {
+  column-count: 5;
+}
+.cell {
+  width: calc(100% / 2);
+  margin: 0px !important;
+}
+.cell img {
+}
+.responsive-image {
+}
+
 /*  Mobile (Portrait) */
 @media only screen and (max-width: 1200px) {
   .projectMenu {
