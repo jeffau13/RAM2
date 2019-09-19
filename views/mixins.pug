@@ -82,9 +82,9 @@ mixin renderProject(project,width)
     .imgwall
       +renderImages(project.fields.images,width)
   if project.fields.slug==='daily'
-  .containerGrid
-    .flex-grid
-      +renderSquare(project.fields.images,width)
+    .containerGrid
+      .flex-grid
+        +renderSquare(project.fields.images,width)
 
   
       
@@ -113,7 +113,7 @@ mixin renderSquare(images,width)
               h4 #{image.fields.title}
               p #{image.fields.description}
       else
-        img.responsive-image.lazyload(data-title=image.fields.title, data-src=image.fields.photo.fields.file.url+"?w="+width)
+        img.responsive-image(data-title=image.fields.title, src=image.fields.photo.fields.file.url+"?w="+width)
         .caption
           h4 #{image.fields.title}
             p #{image.fields.description}

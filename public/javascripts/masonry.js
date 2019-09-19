@@ -12,3 +12,8 @@ window.onload = e => {
     }
   });
 };
+
+macyInstance.runOnImageLoad(function() {
+  console.log('Every time an image loads I get fired');
+  macyInstance.recalculate(true);
+}, true);
