@@ -3,7 +3,7 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 500px 1fr;
-  grid-template-columns: 500px 1fr;
+      grid-template-columns: 500px 1fr;
 }
 
 .centered {
@@ -37,7 +37,7 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   text-align: left;
 }
 
@@ -45,12 +45,12 @@
 @media only screen and (max-width: 1200px) {
   #wrapper {
     -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     padding-bottom: 100px;
   }
   .right .lists {
     -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   .horizontalLogo {
     display: none;

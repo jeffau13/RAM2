@@ -30,13 +30,6 @@ mixin navbar()
                 i.fab.fa-youtube.fa-lg.icons
               a(href='https://www.dropbox.com/sh/mieducoo5jen58p/AAClJuRUwT5-QyfUI6I_7S0qa?dl=0')
                 i.fab.fa-dropbox.fa-lg.icons
-            //
-              <br>
-              <div class='emailBox'>
-              <span>For commissions or other business inqueries, please email:</span>
-              <a href="mailto:rossmorris1400@gmail.com" class="nav-link email" id="email">
-              rossmorris1400@gmail.com</a>
-              </div>
       header#topbar
         .leftTop
           a#open-menu
@@ -85,8 +78,14 @@ mixin renderProject(project,width)
     h1.projectName #{project.fields.title}
     br
     p.projectDesc #{project.fields.description}
-  .imgwall
-    +renderImages(project.fields.images,width)
+  if project.fields.slug!=='daily'
+    .imgwall
+      +renderImages(project.fields.images,width)
+  if project.fields.slug==='daily'
+  .containerGrid
+    .flex-grid
+      +renderSquare(project.fields.images,width)
+
   
       
 
@@ -104,6 +103,21 @@ mixin renderImages(images,width)
           .caption
               h4 #{image.fields.title}
               p #{image.fields.description}
+
+mixin renderSquare(images,width)
+  for image in images
+      if image.fields.link
+       a.alink(href=image.fields.link, data-sub-html='.caption')
+          img.thumbnails.lazyload(data-title=image.fields.title, data-src=image.fields.photo.fields.file.url+"?w="+width)
+          .caption
+              h4 #{image.fields.title}
+              p #{image.fields.description}
+      else
+        img.responsive-image.lazyload(data-title=image.fields.title, data-src=image.fields.photo.fields.file.url+"?w="+width)
+        .caption
+          h4 #{image.fields.title}
+            p #{image.fields.description}
+
 
 mixin renderTutorials(tutorials)
   .projectTitle

@@ -80,6 +80,25 @@
   margin-bottom: 40px;
 }
 
+.containerGrid {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.flexGrid {
+  -webkit-column-count: 5;
+          column-count: 5;
+}
+
+.cell {
+  width: calc(100% / 2);
+  margin: 0px !important;
+}
+
+.responsive-image {
+  width: calc(100% / 5);
+}
+
 /*  Mobile (Portrait) */
 @media only screen and (max-width: 1200px) {
   .projectMenu {

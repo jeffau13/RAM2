@@ -13,6 +13,18 @@ $(document).ready(function() {
       .destroy(true);
   } catch (ex) {}
 
+  // $('.flex-grid').lightGallery({
+  //   thumbnail: false,
+  //   showThumbByDefault: false,
+  //   fullScreen: true,
+  //   hideBarsDelay: 1500,
+  //   mousewheel: false,
+  //   subHtmlSelectorRelative: true,
+  //   counter: false,
+  //   animateThumb: false,
+  //   videoMaxWidth: '85%'
+  // });
+
   $('.imgwall').lightGallery({
     thumbnail: false,
     showThumbByDefault: false,

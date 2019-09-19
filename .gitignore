@@ -1,3 +1,7 @@
 /node_modules
 /ram3dda
 .env
+.DS_Store
+public/assets/.DS_Store
+.DS_Store
+public/assets/.DS_Store
