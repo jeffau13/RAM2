@@ -13,18 +13,6 @@ $(document).ready(function() {
       .destroy(true);
   } catch (ex) {}
 
-  // $('.flex-grid').lightGallery({
-  //   thumbnail: false,
-  //   showThumbByDefault: false,
-  //   fullScreen: true,
-  //   hideBarsDelay: 1500,
-  //   mousewheel: false,
-  //   subHtmlSelectorRelative: true,
-  //   counter: false,
-  //   animateThumb: false,
-  //   videoMaxWidth: '85%'
-  // });
-
   $('.imgwall').lightGallery({
     thumbnail: false,
     showThumbByDefault: false,
@@ -50,24 +38,6 @@ $(document).ready(function() {
   });
 
   // masonry:
-
-  var macyInstance = Macy({
-    container: '.flex-grid',
-    trueOrder: false,
-    waitForImages: true,
-    margin: 0,
-    columns: 6,
-    breakAt: {
-      1200: 5,
-      940: 3,
-      520: 1
-    }
-  });
-
-  macyInstance.runOnImageLoad(function() {
-    console.log('Every time an image loads I get fired');
-    macyInstance.recalculate(true);
-  }, true);
 });
 
 //navbar
@@ -147,5 +117,3 @@ $('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').click(
     }
   }
 );
-
-// masonry
