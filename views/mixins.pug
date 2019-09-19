@@ -113,10 +113,11 @@ mixin renderSquare(images,width)
               h4 #{image.fields.title}
               p #{image.fields.description}
       else
-        img.responsive-image(data-title=image.fields.title, src=image.fields.photo.fields.file.url+"?w="+width)
-        .caption
-          h4 #{image.fields.title}
-            p #{image.fields.description}
+        
+          img.responsive-image(data-title=image.fields.title,href=image.fields.photo.fields.file.url, data-sub-html='.caption' src=image.fields.photo.fields.file.url+"?w="+width)
+          .caption
+            h4 #{image.fields.title}
+              p #{image.fields.description}
 
 
 mixin renderTutorials(tutorials)

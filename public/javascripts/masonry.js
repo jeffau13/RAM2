@@ -2,7 +2,7 @@ window.onload = e => {
   const macyInstance = Macy({
     container: '.flex-grid',
     trueOrder: false,
-    waitForImages: false,
+    waitForImages: true,
     margin: 0,
     columns: 4,
     breakAt: {
