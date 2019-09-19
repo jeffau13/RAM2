@@ -68,10 +68,6 @@
   color: #222222;
   margin-bottom: 40px;
 }
-.containerGrid {
-  margin: 0 auto;
-  padding: 0 1rem;
-}
 
 .flexGrid {
   column-count: 5;
@@ -83,7 +79,6 @@
 .cell img {
 }
 .responsive-image {
-  width: calc(100% / 5);
 }
 
 /*  Mobile (Portrait) */

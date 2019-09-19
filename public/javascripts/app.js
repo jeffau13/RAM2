@@ -48,6 +48,26 @@ $(document).ready(function() {
     videoMaxWidth: '85%',
     vimeoPlayerParams: { autoplay: true }
   });
+
+  // masonry:
+
+  var macyInstance = Macy({
+    container: '.flex-grid',
+    trueOrder: false,
+    waitForImages: true,
+    margin: 0,
+    columns: 6,
+    breakAt: {
+      1200: 5,
+      940: 3,
+      520: 1
+    }
+  });
+
+  macyInstance.runOnImageLoad(function() {
+    console.log('Every time an image loads I get fired');
+    macyInstance.recalculate(true);
+  }, true);
 });
 
 //navbar
@@ -127,3 +147,5 @@ $('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').click(
     }
   }
 );
+
+// masonry
