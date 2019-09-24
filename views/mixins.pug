@@ -78,13 +78,13 @@ mixin renderProject(project,width)
     h1.projectName #{project.fields.title}
     br
     p.projectDesc #{project.fields.description}
-  if project.fields.slug!=='daily'
+  if !project.fields.masonry
     .imgwall
       +renderImages(project.fields.images,width)
-  if project.fields.slug==='daily'
+  if project.fields.masonry
     .containerGrid
-      .flex-grid
-        +renderSquare(project.fields.images,width)
+      .masonry
+        +renderMasonry(project.fields.images,width)
 
   
       
@@ -104,20 +104,18 @@ mixin renderImages(images,width)
               h4 #{image.fields.title}
               p #{image.fields.description}
 
-mixin renderSquare(images,width)
+mixin renderMasonry(images,width)
   for image in images
       if image.fields.link
-       a.alink(href=image.fields.link, data-sub-html='.caption')
-          img.thumbnails.lazyload(data-title=image.fields.title, data-src=image.fields.photo.fields.file.url+"?w="+width)
-          .caption
-              h4 #{image.fields.title}
-              p #{image.fields.description}
+        img.responsive-image(data-title=image.fields.title,href=image.fields.link, data-sub-html='.caption' src=image.fields.photo.fields.file.url+"?w="+width)
+        .caption
+          h4 #{image.fields.title}
+            p #{image.fields.description}
       else
-        
-          img.responsive-image(data-title=image.fields.title,href=image.fields.photo.fields.file.url, data-sub-html='.caption' src=image.fields.photo.fields.file.url+"?w="+width)
-          .caption
-            h4 #{image.fields.title}
-              p #{image.fields.description}
+        img.responsive-image(data-title=image.fields.title,href=image.fields.photo.fields.file.url, data-sub-html='.caption' src=image.fields.photo.fields.file.url+"?w="+width)
+        .caption
+          h4 #{image.fields.title}
+            p #{image.fields.description}
 
 
 mixin renderTutorials(tutorials)
