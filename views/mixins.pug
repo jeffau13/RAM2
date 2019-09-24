@@ -83,7 +83,7 @@ mixin renderProject(project,width)
       +renderImages(project.fields.images,width)
   if project.fields.masonry
     .containerGrid
-      .masonry
+      .masonry(id=project.sys.id)
         +renderMasonry(project.fields.images,width)
 
   
