@@ -25,7 +25,7 @@ $(document).ready(function() {
     videoMaxWidth: '85%'
   });
 
-  $('.flex-grid').lightGallery({
+  $('.masonry').lightGallery({
     selector: '.responsive-image',
     thumbnail: false,
     showThumbByDefault: false,
