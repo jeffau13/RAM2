@@ -7,7 +7,7 @@
 }
 
 .projectMenu {
-  font-size: 1.6em;
+  font-size: 1.65em;
   display: flex;
   width: 1200px;
   margin: 100px auto 0px auto;
@@ -33,12 +33,10 @@
   }
   .projectLink {
     flex: 1;
-    border: 1px solid rgb(199, 199, 199);
     margin: 10px;
     height: 42px;
   }
   .projectLink:hover {
-    border: 1px solid white;
     a {
       color: white;
     }
@@ -76,7 +74,7 @@
 /*  Mobile (Portrait) */
 @media only screen and (max-width: 1200px) {
   .projectMenu {
-    width: 300px;
+    width: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0px;
