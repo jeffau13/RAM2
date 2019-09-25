@@ -1,15 +1,12 @@
 window.onload = e => {
   const list = document.querySelectorAll('.masonry');
-  console.log(list);
-  let MacyInstances = [];
-
+  let macyInstances = [];
   list.forEach(div => {
-    console.log(div.id);
-    MacyInstances.push(
+    macyInstances.push(
       Macy({
         container: `#${div.id}`,
         trueOrder: false,
-        waitForImages: true,
+        waitForImages: false,
         margin: 0,
         columns: 4,
         breakAt: {
@@ -20,12 +17,10 @@ window.onload = e => {
       })
     );
   });
-  MacyInstances.forEach(macyInstance => {
-    macyInstance.runOnImageLoad(function() {
-      console.log('Every time an image loads I get fired');
-      macyInstance.recalculate(true);
+  macyInstances.forEach(instance => {
+    instance.runOnImageLoad(function() {
+      // Every time an image loads this gets fired
+      instance.recalculate(true);
     }, true);
   });
-
-  // console.log(MacyInstances);
 };
