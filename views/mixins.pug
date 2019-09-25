@@ -66,14 +66,14 @@ mixin renderProjectNav(projects)
     .projectMenu
       for project,index in projects
         .projectLink
-              a(href='#'+project.fields.slug) #{project.fields.title}
+              a(href='#'+'to'+ project.sys.id) #{project.fields.title}
 
 mixin renderProjects(projects,width)
   for project in projects
     +renderProject(project,width)
 
 mixin renderProject(project,width)
-  .endpoint(id=project.fields.slug) |
+  .endpoint(id='to'+project.sys.id) |
   .projectTitle(id=project.fields.title)
     h1.projectName #{project.fields.title}
     br
