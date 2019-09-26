@@ -1,4 +1,4 @@
-window.onload = e => {
+document.addEventListener('DOMContentLoaded', () => {
   const list = document.querySelectorAll('.masonry');
   let macyInstances = [];
   list.forEach(div => {
@@ -23,4 +23,4 @@ window.onload = e => {
       instance.recalculate(true);
     }, true);
   });
-};
+});
