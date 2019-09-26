@@ -2,10 +2,10 @@
 
 The content management system (CMS) used in this project is [Contentful][contentful]
 
-## Adding a new image to an existing project
+## Adding a new image/video to an existing project
 
 1. Navigate to the **Content** tab after signing in
-2. Use the blue dropdown to select **Project**. <br>
+2. Use the blue dropdown to select **Project**. Then, select the existing project where the new image belongs to <br>
    ![1](docs1.png)
 
 3. Scroll down to the bottom of the fields and click on the **"+ Create new entry and link"** button and select **images** <br>
