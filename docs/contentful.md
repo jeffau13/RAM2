@@ -2,6 +2,22 @@
 
 The content management system (CMS) used in this project is [Contentful][contentful]
 
+## Creating a new project group
+
+1. Navigate to the **Content** tab after signing in. Then click the **Add entry** dropdown menu and select **Project** <br>
+   ![project](proj1.png)
+2. Fill out each of the following fields:
+   - **Title**: Project's title
+   - **Description**: Project's description, visible after title
+   - **Order**: The order this projects appears on the page in relation to others. A project with order value of "0" appears at the top of the page.
+   - **Masonry**: a boolean toggle to select whether to use the new masonry layout.
+     - Selecting _Yes_ will make the project use the new "masonry" layout. Great for images in varying resolution and different aspect ratios.
+     - Selecting _No_ will make the project use the old grid layout. Suitable for images with high resolution and generally uniform 16:9 aspect ratios.
+3. Add the desired images within the project under the images field. (More in the next section)
+4. Publish the changes made
+   <br>
+   ![publish](publish2.png)
+
 ## Adding a new image/video to an existing project
 
 1. Navigate to the **Content** tab after signing in
