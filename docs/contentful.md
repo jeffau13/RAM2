@@ -52,6 +52,4 @@ The content management system (CMS) used in this project is [Contentful][content
 
 [ReadMe](../readme.md)
 
-     <!-- Link Vars -->
-
 [contentful]: https://contentful.com
