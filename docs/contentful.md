@@ -48,6 +48,9 @@ The content management system (CMS) used in this project is [Contentful][content
     ![publish](publishpng.png)
 11. Then we need to "go back one level" again to the _project_ level and hit publish on last time and we're done! <br> ![publish](publish2.png)
 
+## Links:
+
+[ReadMe](../readme.md)
 
      <!-- Link Vars -->
 
