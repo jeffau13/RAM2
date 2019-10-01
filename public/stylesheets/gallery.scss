@@ -82,7 +82,7 @@
 /*  Mobile (Portrait) */
 @media only screen and (max-width: 1200px) {
   .projectMenu {
-    width: 400px;
+    width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0px;
