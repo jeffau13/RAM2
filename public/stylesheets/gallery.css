@@ -71,6 +71,14 @@
   text-align: center;
 }
 
+.projectTitle .projectDesc .external-link {
+  color: #5cc9f5;
+}
+
+.projectTitle .projectDesc .external-link:hover {
+  color: #dddddd;
+}
+
 .endpoint {
   color: #222222;
   margin-bottom: 40px;
