@@ -78,11 +78,9 @@ mixin renderProject(project,width)
     h1.projectName #{project.fields.title}
     br
     p.projectDesc #{project.fields.description}
-    if project.fields.title === 'SIEGE SERIES'
-      p.projectDesc 4K renders featuring operators from Rainbow Six Siege.
-      br
+    if project.fields.dropboxLink
       p.projectDesc For full resolutions renders, please visit
-        a(href="https://dropbox.com" class="external-link")  this dropbox folder.
+        a(href=project.fields.dropboxLink class="external-link")  this dropbox folder.
     
   if !project.fields.masonry
     .imgwall
