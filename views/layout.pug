@@ -3,6 +3,12 @@ doctype html
 html
 
   head
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-151256038-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-151256038-1');
     block head
     title= title
     meta(charset='UTF-8')
@@ -17,7 +23,7 @@ html
     link(href='stylesheets/loading.css', rel='stylesheet')
     link(href='stylesheets/overlay.css', rel='stylesheet')
     link(href='stylesheets/textScramble.css', rel='stylesheet')
-    +ga(UA-151256038-1)
+
 
   body
     +navbar()
