@@ -29,7 +29,6 @@
     "masonry-layout": "^4.2.2",
     "morgan": "~1.9.0",
     "nodemon": "^1.19.1",
-    "pug": "^2.0.4",
-    "screenres": "^2.0.1"
+    "pug": "^2.0.4"
   }
 }
