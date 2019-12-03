@@ -1,8 +1,9 @@
 var express = require("express");
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+
 var router = express.Router();
 const home = require("../services/home");
 const about = require("../services/about");
-
 /* GET home page. */
 
 router.use((req, res, next) => {
@@ -31,6 +32,10 @@ router.use((req, res, next) => {
     .getAbout()
     .then(about => {
       req.about = about.items[0].fields;
+      const rawRichTextField = about.items[0].fields.paragraph;
+
+      req.about.paragraph = documentToHtmlString(rawRichTextField);
+
       next();
     })
     .catch(err => {
