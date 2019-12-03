@@ -9,37 +9,22 @@ block content
       .left
         .centered
           img.horizontalLogo(src='assets/horizontal.png', 'alt'='Logo')
-          img(src=' assets/ross.jpg')
+          img(src= about.avatar.fields.file.url)
       .right
         .centered
-          h1 About:
-          p
-            | I am Ross Morris. A Los Angeles based 3D artist. I graduated from Full Sail University in December 2017 with
-            | a Bachelor's in Digital Art & Design with The Course Director's Award for Advanced Motion Graphics. I'm
-            | trained as a multimedia specialist using the Adobe suite but I use this to supplement my primary emphasis on
-            | 3D Design and Animation.
-            | Since my graduation I've been working as a freelancer and honing my 3D skill set with numerous personal
-            | projects- much of what you see here.
+          h1 About
+          p.rich-text-body
+            
           hr
           .lists
             .software
               h3 Software i use to produce my work:
               ul
-                li Cinema4D
-                li Adobe Aftereffects
-                li Adobe Premiere 
-                li Adobe Fuse
-                li Adobe Illustrator
-                li Houdini
-                li JSplacement
+                +list(about.software)
             .hardware
               h3 My hardware:
               ul
-                li  I7 7700k
-                li 2x Asus Strix GTX1080ti
-                li 32GB GSkill DDR4 3000MHz
-                li Samsung NVMe 960 Pro 500GB
-                li Samsung SSD 850 Pro 1TB
+                +list(about.hardware)
           hr
           p
             | This website is built by 

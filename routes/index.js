@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const home = require("../services/home");
+const about = require("../services/about");
 
 /* GET home page. */
 
@@ -13,7 +14,10 @@ router.use((req, res, next) => {
       next();
     })
     .catch(err => {
-      console.log("Error in routes/home.js:", JSON.stringify(err, null, 2));
+      console.log(
+        "Error in routes/index.js (home):",
+        JSON.stringify(err, null, 2)
+      );
       res.render("", { err });
     });
 });
@@ -22,8 +26,24 @@ router.get("/", function(req, res, next) {
   res.render("home", { title: "RAM3DDA", id: req.home.backgroundVideo });
 });
 
+router.use((req, res, next) => {
+  about
+    .getAbout()
+    .then(about => {
+      req.about = about.items[0].fields;
+      next();
+    })
+    .catch(err => {
+      console.log(
+        "Error in routes/index.js (about) : ",
+        JSON.stringify(err, null, 2)
+      );
+      res.render("", { err });
+    });
+});
+
 router.get("/about", (req, res, next) => {
-  res.render("about", { title: "About" });
+  res.render("about", { title: "About", about: req.about });
 });
 router.get("/contact", (req, res, next) => {
   res.render("contact", { title: "Contact" });
