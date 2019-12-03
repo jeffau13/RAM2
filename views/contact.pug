@@ -38,7 +38,7 @@ block content
                 .row
                 .col-md-6
                     .form-group
-                    label(for='form_type') Please specify your need *
+                    label(for='form_type') Message Type *
                 
                     select#form_type.form-control(name='type', required='required', data-error='Please specify your need.')
                         option(value='No Type') Please Select One:
@@ -58,7 +58,7 @@ block content
                     textarea#form_message.form-control(name='message', placeholder='Message for me *', rows='4', required='required', data-error='Please, leave us a message.')
                     .help-block.with-errors
                 .col-md-12
-                    input.btn.btn-muted.btn-primary(type='submit', value='Send message')
+                    input.btn.btn-muted.btn-primary.my-5(type='submit', value='Send message')
                 .row
                 .col-md-12
                     p.text-muted
