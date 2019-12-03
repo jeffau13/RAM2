@@ -10,8 +10,7 @@ router.use((req, res, next) => {
   home
     .getHome()
     .then(home => {
-      let homeContent = home.items[0].fields;
-      req.home = homeContent;
+      req.home = home.items[0].fields;
       next();
     })
     .catch(err => {
@@ -24,7 +23,11 @@ router.use((req, res, next) => {
 });
 
 router.get("/", function(req, res, next) {
-  res.render("home", { title: "RAM3DDA", id: req.home.backgroundVideo });
+  res.render("home", {
+    title: "RAM3DDA",
+    id: req.home.backgroundVideo,
+    playbutton: req.home.playbutton
+  });
 });
 
 router.use((req, res, next) => {
@@ -33,9 +36,7 @@ router.use((req, res, next) => {
     .then(about => {
       req.about = about.items[0].fields;
       const rawRichTextField = about.items[0].fields.paragraph;
-
       req.about.paragraph = documentToHtmlString(rawRichTextField);
-
       next();
     })
     .catch(err => {
