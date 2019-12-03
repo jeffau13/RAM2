@@ -140,3 +140,8 @@ mixin ga(id)
         window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
         ga('create', '!{id}', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
     script(src='https://www.google-analytics.com/analytics.js')
+
+
+//- home
+mixin background(id)
+  iframe(src=`https://player.vimeo.com/video/${id}?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1`, frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
