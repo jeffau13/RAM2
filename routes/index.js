@@ -49,10 +49,10 @@ router.use((req, res, next) => {
 });
 
 router.get("/about", (req, res, next) => {
-  res.render("about", { title: "About", about: req.about });
+  res.render("about", { title: "ABOUT", about: req.about });
 });
 router.get("/contact", (req, res, next) => {
-  res.render("contact", { title: "Contact" });
+  res.render("contact", { title: "CONTACT" });
 });
 
 module.exports = router;
