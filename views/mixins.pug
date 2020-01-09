@@ -79,8 +79,8 @@ mixin renderProject(project,width)
     br
     p.projectDesc #{project.fields.description}
     if project.fields.dropboxLink
-      p.projectDesc For full resolutions renders, please visit
-        a(href=project.fields.dropboxLink class="external-link")  this dropbox folder.
+      p.projectDesc 
+        a(href=project.fields.dropboxLink class="external-link")  DROPBOX
     
   if !project.fields.masonry
     .imgwall
