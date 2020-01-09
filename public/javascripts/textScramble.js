@@ -61,7 +61,7 @@ class TextScramble {
 // Example
 // ——————————————————————————————————————————————————
 
-let phrases = ['Ross A. Morris', '3D Design & Animation'];
+let phrases = ['ROSS A. MORRIS', '3D DESIGN & ANIMATION'];
 
 const el = document.querySelector('.text');
 const fx = new TextScramble(el);
