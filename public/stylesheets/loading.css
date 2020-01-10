@@ -81,8 +81,8 @@
   -ms-transform: translateY(-100%); /* IE 9 */
   transform: translateY(-100%); /* Firefox 16+, IE 10+, Opera */
 
-  -webkit-transition: all 0.3s .3s ease-out;
-  transition: all 0.3s .3s ease-out;
+  -webkit-transition: all 0.3s 1s ease-in;
+  transition: all 0.3s 1s ease-in;
 }
 
 /* JavaScript Turned Off */
