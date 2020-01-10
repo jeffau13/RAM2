@@ -56,8 +56,8 @@
   -ms-transform: translateX(-100%); /* IE 9 */
   transform: translateX(-100%); /* Firefox 16+, IE 10+, Opera */
 
-  -webkit-transition: all 0.2s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.2s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 0.25s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .loaded #loader-wrapper .loader-section.section-right {
@@ -65,8 +65,8 @@
   -ms-transform: translateX(100%); /* IE 9 */
   transform: translateX(100%); /* Firefox 16+, IE 10+, Opera */
 
-  -webkit-transition: all 0.5s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.5s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 0.25s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .loaded #loader {
@@ -81,8 +81,8 @@
   -ms-transform: translateY(-100%); /* IE 9 */
   transform: translateY(-100%); /* Firefox 16+, IE 10+, Opera */
 
-  -webkit-transition: all .3s 1s ease-in;
-  transition: all .3s 1s ease-in;
+  -webkit-transition: all .15s 1s ease-in;
+  transition: all .15s 1s ease-in;
 }
 
 /* JavaScript Turned Off */
