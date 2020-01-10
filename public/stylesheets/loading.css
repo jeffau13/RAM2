@@ -56,8 +56,8 @@
   -ms-transform: translateX(-100%); /* IE 9 */
   transform: translateX(-100%); /* Firefox 16+, IE 10+, Opera */
 
-  -webkit-transition: all 0.5s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.5s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 0.2s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.2s 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .loaded #loader-wrapper .loader-section.section-right {
