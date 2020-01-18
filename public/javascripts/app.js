@@ -3,7 +3,7 @@ $(document).ready(function() {
   //loading
   setTimeout(function() {
     $("body").addClass("loaded");
-  }, 3500);
+  }, 3200);
 
   //set lightGallery calls:
   try {
