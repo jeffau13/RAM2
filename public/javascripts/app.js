@@ -48,9 +48,9 @@ $(document).ready(function() {
     counter: false,
     animateThumb: false,
     videoMaxWidth: "85%",
-    vimeoPlayerParams: { autoplay: true, muted: 1 },
+    vimeoPlayerParams: { autoplay: true, muted: 0 },
     youtubePlayerParams: {
-      muted: true
+      muted: false
     }
   });
 });
