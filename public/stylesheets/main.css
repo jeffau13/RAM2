@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 3em;
   color: whitesmoke;
   text-align: center;
@@ -18,7 +18,7 @@ h1 {
 
 h4,
 p {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .title {
@@ -42,7 +42,7 @@ p {
 }
 
 #topbar #name {
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
   color: #d8d8d8;
   font-size: 2.5em;
 }
@@ -80,7 +80,7 @@ p {
 #topbar .topNav {
   text-align: right;
   text-decoration: none;
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
   font-weight: 100;
   color: inherit;
   font-size: 1em;
@@ -118,7 +118,7 @@ p {
 
 #centerWrapper #centerInfo #mainTitle {
   margin-bottom: 5px;
-  font-family: 'roboto-condensed', sans-serif;
+  font-family: "roboto-condensed", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
@@ -126,7 +126,7 @@ p {
 #centerWrapper #centerInfo #subtitle {
   color: white;
   text-align: center;
-  font-family: 'roboto-condensed', sans-serif;
+  font-family: "roboto-condensed", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 1.5em;
@@ -220,7 +220,8 @@ p {
 }
 
 #centerWrapper #mainLogo {
-  margin-left: 266px;
+  display: block;
+  margin: auto;
 }
 
 #centerWrapper .mobileIcons {
@@ -307,7 +308,7 @@ hr {
 }
 
 body {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   opacity: 1;
   -webkit-transition: 1.2s opacity;
   transition: 1.2s opacity;
@@ -331,11 +332,11 @@ body.fade-out {
 .centerTop {
   max-height: 70px;
   margin-top: 10px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .centerTop span {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .rightTop {
@@ -351,7 +352,7 @@ body.fade-out {
 }
 
 .end a {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   color: #fafafa;
 }
 
@@ -490,7 +491,7 @@ body.fade-out {
   }
   #centerWrapper #mainLogo {
     width: 200px;
-    margin-left: 50px;
+    margin: auto;
   }
   #centerWrapper .mobileIcons {
     display: -webkit-box;

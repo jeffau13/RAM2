@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 3em;
   color: whitesmoke;
   text-align: center;
@@ -19,7 +19,7 @@ h1 {
 
 h4,
 p {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .title {
@@ -44,7 +44,7 @@ p {
 
   transition: top 0.3s;
   #name {
-    font-family: 'Roboto Mono';
+    font-family: "Roboto Mono";
     color: rgb(216, 216, 216);
     font-size: 2.5em;
     // margin-top: 10px;
@@ -80,7 +80,7 @@ p {
   .topNav {
     text-align: right;
     text-decoration: none;
-    font-family: 'Roboto Mono';
+    font-family: "Roboto Mono";
     font-weight: 100;
     color: inherit;
     font-size: 1em;
@@ -116,14 +116,14 @@ p {
     // margin-top:20%;
     #mainTitle {
       margin-bottom: 5px;
-      font-family: 'roboto-condensed', sans-serif;
+      font-family: "roboto-condensed", sans-serif;
       font-weight: 500;
       font-style: normal;
     }
     #subtitle {
       color: white;
       text-align: center;
-      font-family: 'roboto-condensed', sans-serif;
+      font-family: "roboto-condensed", sans-serif;
       font-style: normal;
       font-weight: 300;
       font-size: 1.5em;
@@ -187,7 +187,8 @@ p {
     }
   }
   #mainLogo {
-    margin-left: 266px;
+    display: block;
+    margin: auto;
   }
   .mobileIcons {
     display: none;
@@ -285,7 +286,7 @@ hr {
 }
 body {
   // background:#19191D;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   opacity: 1;
   transition: 1.2s opacity;
   margin: 0px;
@@ -304,9 +305,9 @@ body.fade-out {
 .centerTop {
   max-height: 70px;
   margin-top: 10px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   span {
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Roboto Mono", monospace;
   }
 }
 .rightTop {
@@ -318,7 +319,7 @@ body.fade-out {
 .end {
   font-weight: 100;
   a {
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Roboto Mono", monospace;
     color: #fafafa;
   }
 
@@ -471,7 +472,7 @@ body.fade-out {
     }
     #mainLogo {
       width: 200px;
-      margin-left: 50px;
+      margin: auto;
     }
     .mobileIcons {
       display: flex;
